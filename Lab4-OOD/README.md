@@ -38,11 +38,11 @@ conda activate transformers
 - **Out-of-Distribution (OOD)**: FakeData (rumore casuale)
 - **Modello Base**: CNN con accuracy 61.6% su CIFAR-10
 
-![FakeData Example](images/FakeData.png)
+![FakeData Example](images/FakeData.PNG)
 
 **FakeData Characteristics**: Immagini di rumore casuale puro che non assomigliano a nessuna classe CIFAR-10, utilizzate come perfetto esempio di distribuzione sconosciuta.
 
-![Confusion Matrix](images/Confusion_Matrix.png)
+![Confusion Matrix](images/Confusion_Matrix.PNG)
 
 **Model Baseline Performance**: Il modello mostra pattern tipici con confusioni tra categorie simili (animali tra loro, veicoli tra loro). Performance migliori su Ship (75%), Frog (70%), Horse (66%).
 
@@ -73,7 +73,7 @@ conda activate transformers
 - **Target Attack**: Trasformazione cat → deer con perturbazione minima
 - **Budget**: 5/255 (praticamente invisibile all'occhio umano)
 
-![FGSM Attack Example](images/FGSM_Attack_Example.png)
+![FGSM Attack Example](images/FGSM_Attack_Example.PNG)
 
 **Risultati Attacco:**
 - **Successo in 5 iterazioni**: Attacco targeted completato rapidamente
@@ -87,7 +87,7 @@ conda activate transformers
 - Training con mix di campioni clean e adversarial
 - Valutazione robustezza vs OOD detection capability
 
-![Robustness Comparison](images/Robustness_Comparison.png)
+![Robustness Comparison](images/Robustness_Comparison.PNG)
 
 **Performance Robustezza:**
 
@@ -97,7 +97,7 @@ conda activate transformers
 | **Robustezza (max attack)**| 0.054          | 0.179        | **+0.126**    |
 | **AUC OOD Detection**      | 0.818          | 0.807        | -0.012        |
 
-![OOD Distribution Comparison](images/OOD_Distribution_Comparison.png)
+![OOD Distribution Comparison](images/OOD_Distribution_Comparison.PNG)
 
 **Analisi Distribuzione Confidence:**
 - **Modello Standard**: Overconfident, score alti anche per OOD
@@ -113,7 +113,7 @@ conda activate transformers
 - **Formula**: η(x) = ε · sign(∇ₓ L(θ, x, y_target))
 - **Obiettivo**: Manipolazione controllata invece di confusione generica
 
-![Targeted Attack Examples](images/Targeted_Attack_Examples.png)
+![Targeted Attack Examples](images/Targeted_Attack_Examples.PNG)
 
 **Osservazioni Qualitative:**
 - **Perturbazioni invisibili**: ε = 0.03 produce modifiche impercettibili
@@ -122,7 +122,7 @@ conda activate transformers
 
 #### 3.2 Quantitative Analysis & Class Vulnerability
 
-![Attack Success Analysis](images/Attack_Success_Analysis.png)
+![Attack Success Analysis](images/Attack_Success_Analysis.PNG)
 
 **Vulnerabilità per Classe Target (ε = 0.025):**
 
