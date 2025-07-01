@@ -4,10 +4,10 @@ Repository contenente le soluzioni ai laboratori del corso **Deep Learning Appli
 ## 📋 Contenuti
 
 | Lab | Titolo | Descrizione | Notebook | README |
-|--------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------|
-| Lab 1 | Reti MLP e CNN | Implementazione di MLP e CNN su MNIST/CIFAR10, integrazione con Weights & Biases per il monitoraggio, tecniche di knowledge distillation con ResNet18 | [Lab1-CNNs.ipynb](Lab1-CNNs/Lab1-CNNs.ipynb) | [README.md](Lab1-CNNs/README.md) |
-| Lab 3 | Analisi del Sentiment con Transformers | Classificazione binaria del sentiment con SVM e fine-tuning di DistilBERT, implementazione di LoRA per PEFT | [Lab3-Transformers.ipynb](Lab3-Transformers/Lab3-Transformers.ipynb) | [README.md](Lab3-Transformers/README.md) |
-| Lab 4 | Rilevamento OOD e Robustezza Avversariale | Tecniche di Out-of-Distribution detection (MSP, Autoencoder), attacchi FGSM, valutazione ROC/PR | [Lab4_OOD_2025.ipynb](Lab4-OOD/Lab4_OOD_2025.ipynb) | [README.md](Lab4-OOD/README.md) |
+|-----|--------|-------------|----------|---------|
+| **Lab 1** | Reti Neurali Multi-Layer e CNN | Implementazione di MLP e CNN su MNIST/CIFAR10, integrazione con Weights & Biases per il monitoraggio, tecniche di knowledge distillation utilizzando ResNet18 | [`Lab1-CNNs.ipynb`](Lab1-CNNs/Lab1-CNNs.ipynb) | [`README.md`](Lab1-CNNs/README.md) |
+| **Lab 3** | Analisi del Sentiment con Transformers | Classificazione binaria del sentiment utilizzando SVM tradizionali e fine-tuning di DistilBERT, implementazione di LoRA per Parameter-Efficient Fine-Tuning | [`Lab3-Transformers.ipynb`](Lab3-Transformers/Lab3-Transformers.ipynb) | [`README.md`](Lab3-Transformers/README.md) |
+| **Lab 4** | Rilevamento OOD e Robustezza Avversariale | Tecniche di Out-of-Distribution detection tramite Maximum Softmax Probability e Autoencoder, analisi di attacchi avversariali FGSM e valutazione delle metriche ROC/PR | [`Lab4_OOD_2025.ipynb`](Lab4-OOD/Lab4_OOD_2025.ipynb) | [`README.md`](Lab4-OOD/README.md) |
 
 ---
 
