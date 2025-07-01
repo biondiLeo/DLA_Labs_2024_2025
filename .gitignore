@@ -205,3 +205,28 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ===== LABORATORI DEEP LEARNING =====
+# Cartelle dati pesanti
+data/
+logs/
+runs/
+wandb/
+
+# Modelli e checkpoint pesanti
+anaconda_projects/
+distilbert-*/
+lora-results/
+
+# File di modelli pesanti (teniamo solo quelli piccoli)
+*.h5
+*.hdf5
+
+# Cache e file temporanei aggiuntivi
+.DS_Store
+*.tmp
+
+# Risultati e output
+outputs/
+results/
+checkpoints/

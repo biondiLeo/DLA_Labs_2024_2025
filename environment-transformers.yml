@@ -1,0 +1,20 @@
+name: transformers
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - transformers=4.51.1
+  - datasets=3.5.0
+  - matplotlib=3.10.1
+  - scikit-learn=1.6.1
+  - torchvision=0.21.0
+  - pytorch-gpu=2.6.0
+  - sentencepiece=0.2.0
+  - jupyterlab=4.4.0
+  - ipywidgets=8.1.6
+  - tqdm=4.67.1
+  - numpy=2.2.4
+  - pandas=2.2.3
+  - tokenizers=0.21.1
+  - pillow=11.1.0
+  - pyyaml=6.0.2

@@ -1,0 +1,43 @@
+# Deep Learning Applications 2024-2025 - Requirements
+# Python 3.13.x
+
+# === CONDA ENVIRONMENTS (RECOMMENDED) ===
+# Lab 1 (CNNs):
+# conda create -n DLA -c conda-forge jupyterlab ipython matplotlib scikit-learn tqdm pytorch torchvision tensorboard standard-imghdr
+
+# Lab 3 & 4 (Transformers & OOD):  
+# conda create -n transformers -c conda-forge transformers datasets matplotlib scikit-learn torchvision pytorch-gpu accelerate sentencepiece jupyterlab ipywidgets tqdm
+
+# === EXACT VERSIONS USED ===
+# Core Deep Learning
+torch==2.6.0
+torchvision==0.21.0
+
+# Transformers and NLP (for Lab3-4)
+transformers==4.51.1
+datasets==3.5.0
+sentencepiece==0.2.0
+tokenizers==0.21.1
+
+# Data Science and ML
+matplotlib==3.10.1
+scikit-learn==1.6.1
+numpy==2.2.3
+pandas==2.2.3
+scipy==1.15.2
+tqdm==4.67.1
+
+# Jupyter Environment
+jupyterlab==4.3.5
+ipython==9.0.2
+ipywidgets==8.1.7
+
+# Additional utilities
+tensorboard==2.19.0
+standard-imghdr==3.13.0
+pyyaml==6.0.2
+pillow==11.1.0
+
+# === PIP INSTALLATION (if not using conda) ===
+# pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126
+# pip install -r requirements.txt
