@@ -7,7 +7,7 @@ Repository contenente le soluzioni ai laboratori del corso **Deep Learning Appli
 |--------|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | Lab 1 | Reti MLP e CNN         | Implementazione di MLP e CNN su MNIST/CIFAR10, integrazione con Weights & Biases per il monitoraggio, tecniche di knowledge distillation con ResNet18 | [Lab1-CNNs.ipynb](Lab1-CNNs/Lab1-CNNs.ipynb)                   |
 | Lab 3 | Analisi del Sentiment con Transformers | Classificazione binaria del sentiment con SVM e fine-tuning di DistilBERT, implementazione di LoRA per PEFT                                           | [Lab3-Transformers.ipynb](Lab3-Transformers/Lab3-Transformers.ipynb) |
-| Lab 4 | Rilevamento OOD e Robustezza Avversariale | Tecniche di Out-of-Distribution detection (MSP, Autoencoder), attacchi FGSM, valutazione ROC/PR                                                       | [Lab4-OOD-2025.ipynb](Lab4-OOD/Lab4-OOD-2025.ipynb)            |
+| Lab 4 | Rilevamento OOD e Robustezza Avversariale | Tecniche di Out-of-Distribution detection (MSP, Autoencoder), attacchi FGSM, valutazione ROC/PR                                                       | [Lab4-OOD-2025.ipynb](Lab4-OOD/Lab4_OOD_2025.ipynb)            |
 
 ---
 
