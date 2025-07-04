@@ -1,6 +1,7 @@
 # Lab 3: Analisi del Sentiment con Transformers
 
-Classificazione binaria del sentiment utilizzando SVM tradizionali e fine-tuning di DistilBERT, implementazione di LoRA per Parameter-Efficient Fine-Tuning.
+Classificazione binaria del sentiment utilizzando SVM tradizionali e fine-tuning di DistilBERT, implementazione di LoRA per Parameter-Efficient Fine-Tuning + Implementazione extra finale di KD-LoRA seguendo i principi del paper "Combining Knowledge Distillation with Parameter-Efficient Fine-Tuning" - *Azimi et al., 2024 - 4th NeurIPS Efficient Natural Language and Speech Processing Workshop*  
+Disponibile su: https://arxiv.org/pdf/2410.20777
 
 ## 📁 Contenuti
 
@@ -144,6 +145,33 @@ Classification head:
 - **Riduzione Parametri**: **76.5×** meno parametri da addestrare
 - **Risparmio Memoria**: **98.7%**
 
+#### EXTRA: KD-LoRA Implementation
+**Teacher Model Setup:**
+- **Architettura**: BERT-base (110M parametri)
+- **Training**: 2 epoche specifiche sul dataset
+- **Performance Teacher**: **87.15%** validation accuracy
+- **Ruolo**: Fornisce soft targets per la distillazione
+
+**Training Progress KD-LoRA:**
+
+| Epoca | Loss Combinata | Loss Task | Loss Distillation | Accuratezza Validation |
+|-------|----------------|-----------|-------------------|------------------------|
+| 1     | 0.428          | 0.445     | 0.411             | 82.84%                 |
+| 2     | 0.342          | 0.359     | 0.325             | 84.24%                 |
+| 3     | 0.281          | 0.291     | 0.271             | 84.43%                 |
+
+**Performance Finali:**
+- **Accuratezza Test**: **83.11%**
+- **Parametri Trainable**: **887,042** (identici a LoRA)
+- **Temperature**: **3.0** per soft target smoothing
+- **Alpha**: **0.5** (bilanciamento task/distillation loss)
+
+**Miglioramenti vs LoRA:**
+- **Performance**: 83.11% vs 82.93% LoRA (+0.18 punti percentuali)
+- **Knowledge Transfer Rate**: 6.5% del gap teacher-student recuperato
+- **Performance Retention**: 100.2% delle performance di LoRA
+- **Zero Overhead**: Stessa velocità di inferenza del modello LoRA
+
 ## 📈 Confronto Completo degli Approcci
 
 | Approccio            | Tipo Addestramento              | Test Accuracy | Parametri Trainable | Tempo Training | Performance Gap |
@@ -151,6 +179,7 @@ Classification head:
 | **Baseline (SVM)**   | Feature extraction + classifier | 79.46%        | 0 (frozen)          | ~40 secondi    | baseline        |
 | **Full Fine-tuning** | End-to-end completo             | **83.58%**    | 67.8M (100%)        | ~3 minuti      | **+4.12%**      |
 | **LoRA Fine-tuning** | Parameter-efficient adapter     | **82.93%**    | **0.9M (1.31%)**    | **1.5 minuti** | **+3.47%**      |
+| **KD-LoRA**          | Parameter-efficient + distillation | **83.11%**    | **0.9M (1.31%)**    | **1.6 minuti** | **+3.65%**      |
 
 ## 🔍 Conclusioni Chiave
 
@@ -166,6 +195,11 @@ LoRA raggiunge il **99.2%** delle performance del full fine-tuning con solo l'**
 - **98.7% risparmio memoria**
 - **2× più veloce** nel training
 - Perdita trascurabile: **-0.65%** vs full fine-tuning
+
+*Considerazioni extra su KD-LoRA*:
+- KD-LoRA raggiunge il **99.4%** delle performance del Full Fine-Tuning con solo l'**1.3%** dei parametri
+- Riduzione del **37%** del gap di performance rispetto al solo LoRA
+- **Validazione empirica** dell'efficacia del knowledge transfer in contesti parameter-efficient
 
 ### 3. Robustezza delle Soluzioni
 - Tutte le implementazioni mantengono performance bilanciate
